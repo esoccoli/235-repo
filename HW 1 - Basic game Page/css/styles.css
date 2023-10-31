@@ -1,0 +1,19 @@
+h1 { 
+    color:orangered;
+    font-family: sans-serif;
+    border-bottom: 1px solid blue;
+    }
+blockquote { 
+    background-color: lightgray;
+    padding: 1rem;
+    }
+ul {
+    background-color: lightblue;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    }
+img {
+    padding: 1rem;
+}

@@ -1,0 +1,1075 @@
+body {
+    margin: 0;
+}
+
+main {
+    padding-top: 8rem;
+}
+
+@media only screen and (min-width: 750px) {
+    #navbar {
+        background-color: dodgerblue;
+        height: 5em;
+        display: flex;
+        width: 100%;
+        position: fixed;
+        justify-content: center;
+        margin: 0;
+        z-index: 1;
+    }
+
+    #navbar a {
+        color: black;
+        text-decoration: none;
+    }
+
+    #navbar a:hover {
+        background-color: rgba(255, 0, 0, 0.75);
+    }
+
+    .center {
+        display: inline-flex;
+        justify-content: center;
+    }
+
+    .navitem {
+        font-size: 24px;
+        padding: 1em;
+    }
+
+    .navitem {
+        color: black;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 749px) {
+
+    #navbar {
+        background-color: dodgerblue;
+        height: 5em;
+        display: flex;
+        width: 100%;
+        position: fixed;
+        justify-content: center;
+        margin: 0;
+        z-index: 1;
+    }
+
+    #navbar a {
+        color: black;
+        text-decoration: none;
+    }
+
+    #navbar a:hover {
+        background-color: rgba(255, 0, 0, 0.75);
+    }
+
+    .center {
+        display: inline-flex;
+        justify-content: center;
+    }
+
+    .navitem {
+        color: black;
+        text-align: center;
+        justify-content: center;
+        font-size: 16px;
+        padding: 2em;
+    }
+}
+
+@media only screen and (max-width: 599px) {
+
+    #navbar {
+        background-color: dodgerblue;
+        height: 5em;
+        display: flex;
+        width: 100%;
+        position: fixed;
+        justify-content: center;
+        margin: 0;
+        z-index: 1;
+    }
+
+    #navbar a {
+        color: black;
+        text-decoration: none;
+    }
+
+    #navbar a:hover {
+        background-color: rgba(255, 0, 0, 0.75);
+    }
+
+    .center {
+        display: inline-flex;
+        justify-content: center;
+    }
+
+    .navitem {
+        color: black;
+        text-align: center;
+        justify-content: center;
+        font-size: 14px;
+        padding-top: 2em;
+        padding-bottom: 2em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .namebox {
+        display: flex;
+        background-color: dodgerblue;
+        border-radius: 3em;
+        height: 18rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70vw;
+
+    }
+
+    .myimg {
+        display: flex;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        margin: auto;
+    }
+
+    #name {
+        display: flex;
+        text-align: center;
+        margin: auto;
+        font-size: 48px;
+    }
+}
+
+@media only screen and (max-width: 1399px) {
+    .namebox {
+        display: flex;
+        background-color: dodgerblue;
+        border-radius: 3em;
+        height: 12rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70vw;
+    }
+
+    .myimg {
+        display: flex;
+        border-radius: 50%;
+        width: 125px;
+        height: 125px;
+        margin: auto;
+        /* margin-left: 5em; */
+
+    }
+
+    #name {
+        display: flex;
+        text-align: center;
+        margin: auto;
+        font-size: 48px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .aboutme {
+        background-color: rgba(255, 0, 0, 0.75);
+        border-radius: 3em;
+        height: 13em;
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .abouttext {
+        font-size: 24px;
+        text-align: center;
+        font-weight: 500;
+        padding-top: 1em;
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+}
+
+@media only screen and (min-width: 1150px) and (max-width: 1399px) {
+    .aboutme {
+        background-color: rgba(255, 0, 0, 0.75);
+        border-radius: 3em;
+        height: 14em;
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .abouttext {
+        font-size: 22px;
+        text-align: center;
+        font-weight: 500;
+        padding-top: 1em;
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+}
+
+@media only screen and (min-width: 950px) and (max-width: 1149px) {
+    .aboutme {
+        background-color: rgba(255, 0, 0, 0.75);
+        border-radius: 3em;
+        height: 15em;
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .abouttext {
+        font-size: 20px;
+        text-align: center;
+        font-weight: 500;
+        padding-top: 1em;
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 949px) {
+    .aboutme {
+        background-color: rgba(255, 0, 0, 0.75);
+        border-radius: 3em;
+        height: 20em;
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .abouttext {
+        font-size: 22px;
+        text-align: center;
+        font-weight: 500;
+        padding-top: 1em;
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 799px) {
+    .aboutme {
+        background-color: rgba(255, 0, 0, 0.75);
+        border-radius: 3em;
+        height: 28em;
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .abouttext {
+        font-size: 20px;
+        text-align: center;
+        font-weight: 500;
+        padding-top: 1em;
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    .aboutme {
+        background-color: rgba(255, 0, 0, 0.75);
+        border-radius: 3em;
+        height: 38em;
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .abouttext {
+        font-size: 20px;
+        text-align: center;
+        font-weight: 500;
+        padding-top: 1em;
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+}
+
+.sectionheader {
+    font-size: 36px;
+    text-align: center;
+    font-weight: 600;
+    padding-top: 10px;
+}
+
+@media only screen and (min-width: 1000px) {
+    #experience {
+        background-color: dodgerblue;
+        border-radius: 3em;
+        height: 20em;
+        justify-content: center;
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .info {
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-sjassoc {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-right: 1em;
+    }
+
+    .roledescription {
+        font-size: 24px;
+        margin-left: 1em;
+    }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 999px) {
+    #experience {
+        background-color: dodgerblue;
+        border-radius: 3em;
+        height: 24em;
+        justify-content: center;
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .info {
+        display: flex;
+        justify-content: center;
+        margin-left: 1em;
+    }
+
+    .img-sjassoc {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-top: 3em;
+    }
+
+    .roledescription {
+        font-size: 19px;
+        margin-left: 2em;
+        margin-right: 3em;
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 649px) {
+    #experience {
+        background-color: dodgerblue;
+        border-radius: 3em;
+        height: 35em;
+        justify-content: center;
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .info {
+        display: flex;
+        justify-content: center;
+        margin-left: 1em;
+    }
+
+    .img-sjassoc {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-top: 3em;
+    }
+
+    .roledescription {
+        font-size: 18px;
+        margin-left: 2em;
+        margin-right: 3em;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    #experience {
+        background-color: dodgerblue;
+        border-radius: 3em;
+        height: 40em;
+        justify-content: center;
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .info {
+        display: flex;
+        justify-content: center;
+        margin-left: 1em;
+    }
+
+    .img-sjassoc {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-top: 3em;
+    }
+
+    .roledescription {
+        font-size: 18px;
+        margin-left: 2em;
+        margin-right: 3em;
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    #projects {
+        background-color: rgba(255, 0, 0, 0.75);
+        border-radius: 3em;
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 1em;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "one two"
+            "three four";
+        margin-left: 3em;
+        margin-right: 3em;
+        gap: 3em;
+    }
+
+    .brick-breaker {
+        grid-area: one;
+    }
+
+    .img-brickbreaker {
+        width: 400px;
+        height: 200px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .conditional {
+        grid-area: two;
+    }
+
+    .img-conditional {
+        width: 350px;
+        height: 200px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .devcade-website {
+        grid-area: three;
+    }
+
+    .img-devcade-website {
+        width: 400px;
+        height: 200px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .railgungame {
+        grid-area: four;
+    }
+
+    .img-railgungame {
+        width: 400px;
+        height: 200px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .proj-name {
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .proj-info {
+        text-align: center;
+        font-size: 20px;
+        margin-left: 3em;
+        margin-right: 3em;
+        text-justify: inter-word;
+    }
+
+    .skills-used {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .skill {
+        font-size: 18px;
+        border: 2px solid black;
+        padding: 15px;
+        border-radius: 1em;
+        margin: 1px;
+    }
+
+    #projects a {
+        color: black;
+        text-decoration: none;
+    }
+
+    #projects a:hover {
+        background-color: dodgerblue;
+    }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1399px) {
+    #projects {
+        background-color: rgba(255, 0, 0, 0.75);
+        border-radius: 3em;
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 1em;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "one two"
+            "three four";
+        margin-left: 3em;
+        margin-right: 3em;
+        gap: 3em;
+    }
+
+    .brick-breaker {
+        grid-area: one;
+    }
+
+    .img-brickbreaker {
+        width: 200px;
+        height: 100px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .conditional {
+        grid-area: two;
+    }
+
+    .img-conditional {
+        width: 175px;
+        height: 100px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .devcade-website {
+        grid-area: three;
+    }
+
+    .img-devcade-website {
+        width: 200px;
+        height: 100px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .railgungame {
+        grid-area: four;
+    }
+
+    .img-railgungame {
+        width: 200px;
+        height: 100px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .proj-name {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    .proj-info {
+        text-align: center;
+        font-size: 18px;
+        margin-left: 3em;
+        margin-right: 3em;
+        text-justify: inter-word;
+    }
+
+    .skills-used {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .skill {
+        font-size: 14px;
+        border: 2px solid black;
+        padding: 15px;
+        border-radius: 1em;
+        margin: 1px;
+    }
+
+    #projects a {
+        color: black;
+        text-decoration: none;
+    }
+
+    #projects a:hover {
+        background-color: dodgerblue;
+    }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 999px) {
+    #projects {
+        background-color: rgba(255, 0, 0, 0.75);
+        border-radius: 3em;
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 1em;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "one"
+            "two"
+            "three"
+            "four";
+        margin-left: 3em;
+        margin-right: 3em;
+        gap: 3em;
+        grid-auto-flow: column;
+    }
+
+    .brick-breaker {
+        grid-area: one;
+    }
+
+    .img-brickbreaker {
+        width: 400px;
+        height: 200px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .conditional {
+        grid-area: two;
+    }
+
+    .img-conditional {
+        width: 350px;
+        height: 200px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .devcade-website {
+        grid-area: three;
+    }
+
+    .img-devcade-website {
+        width: 400px;
+        height: 200px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .railgungame {
+        grid-area: four;
+    }
+
+    .img-railgungame {
+        width: 400px;
+        height: 200px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .proj-name {
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .proj-info {
+        text-align: center;
+        font-size: 20px;
+        margin-left: 3em;
+        margin-right: 3em;
+        text-justify: inter-word;
+    }
+
+    .skills-used {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .skill {
+        font-size: 18px;
+        border: 2px solid black;
+        padding: 15px;
+        border-radius: 1em;
+        margin: 1px;
+    }
+
+    #projects a {
+        color: black;
+        text-decoration: none;
+    }
+
+    #projects a:hover {
+        background-color: dodgerblue;
+    }
+}
+
+@media only screen and (max-width: 699px) {
+    #projects {
+        background-color: rgba(255, 0, 0, 0.75);
+        border-radius: 3em;
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 1em;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "one"
+            "two"
+            "three"
+            "four";
+        margin-left: 3em;
+        margin-right: 3em;
+        gap: 3em;
+    }
+
+    .brick-breaker {
+        grid-area: one;
+    }
+
+    .img-brickbreaker {
+        width: 150px;
+        height: 75px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .conditional {
+        grid-area: two;
+    }
+
+    .img-conditional {
+        width: 200px;
+        height: 100px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .devcade-website {
+        grid-area: three;
+    }
+
+    .img-devcade-website {
+        width: 150px;
+        height: 75px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .railgungame {
+        grid-area: four;
+    }
+
+    .img-railgungame {
+        width: 150px;
+        height: 75px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .proj-name {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .proj-info {
+        text-align: center;
+        font-size: 20px;
+        margin-left: 3em;
+        margin-right: 3em;
+        text-justify: inter-word;
+    }
+
+    .skills-used {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .skill {
+        font-size: 16px;
+        border: 2px solid black;
+        padding: 15px;
+        border-radius: 1em;
+        margin: 1px;
+    }
+
+    #projects a {
+        color: black;
+        text-decoration: none;
+    }
+
+    #projects a:hover {
+        background-color: dodgerblue;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+
+    #activities {
+        background-color: dodgerblue;
+        border-radius: 3em;
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #activities a {
+        color: black;
+        text-decoration: none;
+    }
+
+    #activities a:hover {
+        background-color: rgba(255, 0, 0, 0.75);
+    }
+
+    .flex {
+        display: flex;
+        justify-content: center;
+    }
+
+    .csh {
+        font-size: 28px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 1em;
+    }
+
+    .img-csh {
+        display: flex;
+        justify-content: center;
+        width: 150px;
+        height: 150px;
+        margin-right: 1em;
+    }
+
+    .activity-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "member secretary constitution";
+        grid-auto-flow: column;
+        gap: 2em;
+        margin-left: 3em;
+        margin-right: 3em;
+    }
+
+    .member {
+        grid-area: member;
+        text-align: center;
+    }
+
+    .secretary {
+        grid-area: secretary;
+        text-align: center;
+    }
+
+    .constitution {
+        grid-area: constitution;
+        text-align: center;
+    }
+
+    .item-name {
+        font-size: 24px;
+    }
+
+    .item-info {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 999px) {
+
+    #activities {
+        background-color: dodgerblue;
+        border-radius: 3em;
+        width: 70vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #activities a {
+        color: black;
+        text-decoration: none;
+    }
+
+    #activities a:hover {
+        background-color: rgba(255, 0, 0, 0.75);
+    }
+
+    .flex {
+        display: flex;
+        justify-content: center;
+    }
+
+    .csh {
+        font-size: 28px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 1em;
+    }
+
+    .activity-grid {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "member"
+            "secretary"
+            "constitution";
+        grid-auto-flow: column;
+        gap: 1em;
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
+    .member {
+        grid-area: member;
+        text-align: center;
+    }
+
+    .secretary {
+        grid-area: secretary;
+        text-align: center;
+    }
+
+    .constitution {
+        grid-area: constitution;
+        text-align: center;
+    }
+
+
+}
+
+.item-name {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.item-info {
+    font-size: 22px;
+}
+
+@media only screen and (min-width: 900px) {
+    #links {
+        background-color: dodgerblue;
+        display: flex;
+        margin-top: 2em;
+        text-align: center;
+        font-size: 22px;
+        justify-content: space-evenly;
+    }
+
+    #links a {
+        color: black;
+        text-decoration: none;
+        padding: 1em;
+    }
+
+    #links a:hover {
+        background-color: rgba(255, 0, 0, 0.75);
+    }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 899px) {
+    #links {
+        background-color: dodgerblue;
+        display: flex;
+        margin-top: 2em;
+        text-align: center;
+        font-size: 20px;
+        justify-content: space-evenly;
+    }
+
+    #links a {
+        color: black;
+        text-decoration: none;
+        padding: 1em;
+    }
+
+    #links a:hover {
+        background-color: rgba(255, 0, 0, 0.75);
+    }
+}
+
+@media only screen and (max-width: 649px) {
+    #links {
+        background-color: dodgerblue;
+        display: flex;
+        margin-top: 2em;
+        text-align: center;
+        font-size: 16px;
+        justify-content: space-evenly;
+    }
+
+    #links a {
+        color: black;
+        text-decoration: none;
+        padding: 1em;
+    }
+
+    #links a:hover {
+        background-color: rgba(255, 0, 0, 0.75);
+    }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Web Apps-4-HW</title>
+    <style>
+        body {
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My Favorites</h1>
+    <h2>My Favorite Colors</h2>
+
+    <ol id="colorsList">
+
+    </ol>
+
+    <h2>My Favorite Foods</h2>
+
+    <ol id="foodsList">
+
+    </ol>
+
+    <h2>My Favorite Links</h2>
+
+    <ol id="linksList">
+
+    </ol>
+
+    <script>
+        "use strict";
+        let colors = ["red", "green", "blue", "purple", "pink"];
+        let foods = []; // add some foods
+
+        foods.push("pizza", "oreos", "pasta", "cake");
+
+        for (let i = 0; i < colors.length; i++) {
+            createList(colors[i], document.getElementById("colorsList"));
+        }
+
+        for (let item of foods) {
+            createList(item, document.getElementById("foodsList"));
+        }
+
+
+        // Optional - can you figure out how to pull both the key AND the value
+        // from the `links` object literal?
+        let links = {
+            "CSH": "https://csh.rit.edu",
+            "Minecraft": "https://minecraft.com",
+            "Pokemon": "https://pokemon.com"
+        }
+
+        for (let item in links) {
+            createList(item, document.getElementById("linksList"));
+        }
+
+        function createList(listElement, array) {
+            // you write the rest
+            let listItem = document.createElement('li');
+            listItem.innerHTML = `${listElement}`;
+            array.appendChild(listItem);
+        }
+    </script>
+</body>
+
+</html>

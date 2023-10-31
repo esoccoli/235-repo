@@ -1,0 +1,358 @@
+#intellogo img {
+    width: 100px;
+    height: 100px;
+    padding-left: 10rem;
+    padding-top: 2rem;
+}
+
+#headerbgimg img {
+    width: 1600px;
+    height: 300px;
+    padding-left: 10rem;
+    padding-top: 2rem;
+}
+
+#headerimgoverlapbox {
+    background-color: rgba(255, 0, 0, 0.35);
+    width: 350px;
+    height: 350px;
+    display: flex;
+    position: relative;
+    transform: translateX(200px) translateY(-150px);
+}
+
+#headerimgoverlapbox h1 {
+    font-size: 60px;
+    font-weight: 300;
+    padding-left: 20px;
+}
+
+#benefitspkgtext {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: white;
+    transform: translateY(-420px) translateX(1210px);
+    width: 550px;
+    height: 200px;
+}
+
+#benefitspkgtext p {
+    margin-left: 140px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    font-size: 20px;
+}
+
+#redsquare {
+    background-color: rgba(255, 0, 0, 0.75);
+    width: 75px;
+    height: 75px;
+    display: flex;
+    position: relative;
+    align-self: self-end;
+    transform: translateY(-495px) translateX(1210px);
+}
+
+#yellowsquare {
+    background-color: rgba(255, 255, 0, 0.75);
+    display: flex;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    transform: translateY(-600px) translateX(1275px);
+}
+
+#six-item-grid {
+    display: grid;
+    grid-template-columns: 700px 300px 600px;
+    grid-template-rows: 250px 600px 100px;
+    grid-template-areas: 
+                "paid-sabbatical cash-bonuses intel-shuttle" 
+                "work-anywhere flexible-work-models charitable-giving" 
+                "work-anywhere flexible-work-models tuition-reimbursement";
+    transform: translateY(-400px) translateX(150px);
+}
+
+#paid-sabbatical-box {
+    background-color: whitesmoke;
+    display: flex;
+    width: 600px;
+    height: 200px;
+    grid-area: paid-sabbatical;
+}
+
+#paid-sabbatical-img {
+    width: 150px;
+    height: 150px;
+    margin-left: 10px;
+    align-self: center;
+}
+
+#paid-sabbatical-text {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    font-size: 22px;
+}
+
+#paid-sabbatical-header {
+    font-weight: 600;
+}
+
+#cash-bonuses-box {
+    background-color: dodgerblue;
+    width: 200px;
+    height: 200px;
+    color: white;
+    grid-area: cash-bonuses;
+}
+
+#cash-bonuses-text {
+    font-size: 26px;
+    font-weight: 500;
+    text-align: center;
+    align-self: center;
+}
+
+#intel-shuttle-box {
+    background-color: whitesmoke;
+    display: flex;
+    width: 600px;
+    height: 200px;
+    grid-area: intel-shuttle;
+}
+
+#intel-shuttle-img {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-items: right;
+    padding-right: 1em;
+    padding-top: 1em;
+}
+
+#intel-shuttle-text {
+    margin-left: 2rem;
+    margin-right: 5rem;
+    font-size: 32px;
+    text-align: center;
+}
+
+#work-anywhere-box {
+    background-color:rgba(255, 0, 0, 0.75);
+    width: 500px;
+    height: 400px;
+    grid-area: work-anywhere;
+}
+
+#work-anywhere-header {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    margin-left: 3rem;
+}
+
+#work-anywhere-text {
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    transform: translateY(-18px);
+    margin-left: 3rem;
+}
+
+#work-from-home-img {
+    transform: translateY(-28px);
+    width: 500px;
+    height: 300px;
+}
+
+#flexible-work-models-box {
+    background-color: dodgerblue;
+    width: 400px;
+    height: 400px;
+    grid-area: flexible-work-models;
+    transform: translateX(-140px);
+}
+
+#flexible-work-models-header {
+    display: flex;
+    font-size: 32px;
+    font-weight: 600;
+    padding-left: 15px;
+    justify-self: center;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+.flexible-work-models-text {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    line-height: 0.5em;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+#charitable-giving-box {
+    background-color: dodgerblue;
+    width: 400px;
+    height: 150px;
+    grid-area: charitable-giving;
+}
+
+#charitable-giving-header {
+    font-size: 28px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+
+#charitable-giving-text {
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+}
+
+#tuition-reimbursement-box {
+    background-color: rgba(255, 0, 0, 0.75);
+    width: 500px;
+    height: 200px;
+    grid-area: tuition-reimbursement;
+    transform: translateY(-400px);
+}
+
+#tuition-reimbursement-img {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    transform: translateY(50px);
+    margin-left: 1em;
+}
+
+#tuition-reimbursement-header {
+    font-size: 28px;
+    font-weight: 600;
+    display: flex;
+    justify-content: right;
+    margin-right: 1em;
+    transform: translateY(-100px);
+}
+
+#tuition-reimbursement-text {
+    font-size: 20px;
+    display: flex;
+    justify-content: right;
+    margin-right: 1em;
+    transform: translateY(-100px);
+}
+
+#small-blue-square {
+    background-color: dodgerblue;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-100px) translateX(420px);
+}
+#small-yellow-square {
+    background-color: yellow;
+    width: 25px;
+    height: 25px;
+    transform: translateY(-117px) translateX(450px);
+}
+
+#peer-recognition-box {
+    background-color: whitesmoke;
+    width: 370px;
+    height: 200px;
+    transform: translateY(-680px) translateX(150px);
+}
+
+#peer-recognition-img {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1em;
+}
+
+#peer-recognition-text {
+    font-size: 24px;
+    text-align: center;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+#employee-stock-box {
+    background-color: dodgerblue;
+    width: 400px;
+    height: 170px;
+    transform: translateY(-980px) translateX(530px);
+    border: 15px solid white
+}
+
+#employee-stock-header {
+    font-size: 22px;
+    text-align: center;
+    padding: 20px;
+}
+
+#employee-stock-text {
+    font-size: 20px;
+    text-align: center;
+    transform: translateY(-40px);
+}
+
+#match-401k-box {
+    background-color: rgba(255, 0, 0, 0.75);
+    width: 400px;
+    height: 100px;
+    transform: translateY(-1010px) translateX(545px);
+}
+
+#match-401k-text {
+    font-size: 32px;
+    text-align: center;
+    transform: translateY(30px);
+}
+
+#happy-employee-img {
+    width: 350px;
+    height: 200px;
+    transform: translateY(-1210px) translateX(960px);
+}
+
+#wellness-text {
+    width: 320px;
+    height: 200px;
+    transform: translateY(-1430px) translateX(1330px);
+    font-size: 32px;
+    padding-top: 15px;
+}
+
+#footer-area {
+    text-align: right;
+    transform: translateY(-1430px) translateX(-150px);
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+a:link {
+  text-decoration: none;
+  color: blue;
+}
+
+a:visited {
+  text-decoration: none;
+  color: blue;
+}
+
+a:focus, a:hover {
+  text-decoration: none;
+  color: blue;
+}
+
+a:active {
+  text-decoration: none;
+  color: blue;
+}

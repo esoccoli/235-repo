@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Web Apps-4-HW</title>
+    <style>
+        body {
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My Favorites</h1>
+
+    <h2>My Favorite Links</h2>
+
+    <ol id="linksList">
+
+    </ol>
+
+    <script>
+        "use strict";
+
+        // Optional - can you figure out how to pull both the key AND the value
+        // from the `links` object literal?
+        let links = {
+            "CSH": "https://csh.rit.edu",
+            "Minecraft": "https://minecraft.com",
+            "Pokemon": "https://pokemon.com"
+        }
+
+        const list = document.getElementById("linksList");
+
+        for (let key in links) {
+            const listItem = document.createElement("li");
+            const linkItem = document.createElement("a");
+
+            linkItem.href = links[key];
+            linkItem.textContent = key;
+
+            listItem.appendChild(linkItem);
+            list.append(listItem);
+        }
+    </script>
+</body>
+
+</html>
