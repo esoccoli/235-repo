@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Phrases</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <script>
+        let phrases = [
+            "Develop amnesia conveniently and forget everything you heard!",
+            "Don't touch the poster at the Game Corner! There's no secret switch behind it!",
+            "Why can't I just trip over a get-rich-quick scheme already?",
+            "Hey, I'll Use My Trusty Frying Pan As A Drying Pan.",
+            "When you have lemons, you make lemonade; and when you have rice, you make rice balls."
+        ]
+
+        function generateQuote() {
+            let quoteIndex = Math.floor(Math.random() * 5);
+            document.getElementById("quote").innerHTML = `${phrases[quoteIndex]}`;
+        }
+    </script>
+</head>
+
+<body onload="generateQuote()">
+    <div id="maincontainer">
+        <img id="bgimg" src="surprised-pikachu.png" alt="Surprised Pikachu">
+        <div class="overlay">
+            <h1 id="pageheader">What did you just say?</h1>
+        </div>
+    </div>
+
+    <div id="quotebox">
+        <p id="quote"></p>
+    </div>
+
+    <div id="button" onclick="generateQuote()">
+        <p id="button-text">Generate</p>
+    </div>
+
+    <footer>
+        &copy; Ella Soccoli 2023
+    </footer>
+</body>
+
+</html>

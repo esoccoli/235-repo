@@ -1,0 +1,214 @@
+body {
+    background-color: lightskyblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#maincontainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#maincontainer img {
+    max-width: 100%;
+    height: auto;
+    justify-content: center;
+}
+
+#pageheader {
+    justify-content: center;
+}
+
+.overlay {
+    position: absolute;
+    width: 1025px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    /* align-content: center; */
+    color: white;
+}
+
+@media only screen and (min-width: 1000px) {
+
+
+    #quotebox {
+        background-color: azure;
+        width: 1025px;
+        height: 150px;
+        margin: auto;
+    }
+
+    #quote {
+        text-align: center;
+        padding: 24px;
+        font-size: 24px;
+    }
+
+    #button {
+        display: flex;
+        padding: 5px 15px;
+        font-size: 24px;
+        text-align: center;
+        color: #000;
+        background-color: #4CAF50;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+        margin-top: 1em;
+        margin-left: 18em;
+        margin-right: 18em;
+    }
+
+    #button:hover {
+        background-color: #3e8e41
+    }
+
+    #button-text {
+        text-align: center;
+    }
+
+    #button:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 999px) {
+    #maincontainer {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    #maincontainer img {
+        max-width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+
+    .overlay {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-content: center;
+        color: white;
+    }
+
+    #pageheader {
+        justify-content: center;
+        font-size: 18px;
+    }
+
+    #quotebox {
+        background-color: azure;
+        width: 750px;
+        height: 150px;
+        margin: auto;
+    }
+
+    #quote {
+        text-align: center;
+        padding: 24px;
+        font-size: 24px;
+    }
+
+    #button {
+        display: flex;
+        padding: 5px 15px;
+        font-size: 24px;
+        text-align: center;
+        color: #000;
+        background-color: #4CAF50;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+        margin-top: 1em;
+    }
+
+    #button-text {
+        text-align: center;
+    }
+
+    #button:hover {
+        background-color: #3e8e41
+    }
+
+    #button:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    #maincontainer {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+
+    #maincontainer img {
+        max-width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+
+    .overlay {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-content: center;
+        color: white;
+    }
+
+    #pageheader {
+        justify-content: center;
+        font-size: 18px;
+    }
+
+    #quotebox {
+        background-color: azure;
+        width: 450px;
+        height: 150px;
+        margin: auto;
+    }
+
+    #quote {
+        text-align: center;
+        padding: 24px;
+        font-size: 24px;
+    }
+
+    #button {
+        display: flex;
+        padding: 5px 10px;
+        font-size: 24px;
+        color: #000;
+        background-color: #4CAF50;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+        margin-top: 1em;
+    }
+
+    #button-text {
+        text-align: center;
+    }
+
+    #button:hover {
+        background-color: #3e8e41
+    }
+
+    #button:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
+    }
+}
+
+footer {
+    display: block;
+    height: 50px;
+    text-align: center;
+    margin-top: 2em;
+    font-size: 24px;
+}

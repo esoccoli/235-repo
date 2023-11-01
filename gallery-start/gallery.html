@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Image Gallery</title>
+	<style>
+		body {
+			font-family: "Helvetica", "Arial", serif;
+			color: #333;
+			background-color: #fff;
+			margin: 1em 10%;
+		}
+
+		#main {
+			padding-top: 30px;
+			width: 400px;
+			margin: 0 auto;
+		}
+
+		span[data-image] {
+			transition-property: opacity;
+			transition-duration: 0.5s;
+			color: #c60;
+			background-color: transparent;
+			font-weight: bold;
+			text-decoration: none;
+			cursor: pointer;
+		}
+
+		span[data-image]:hover {
+			opacity: 0.5;
+		}
+
+		h1 {
+			color: #333;
+			background-color: transparent;
+		}
+
+		ul {
+			padding: 0;
+		}
+
+		li {
+			float: left;
+			padding: 1em;
+			list-style: none;
+		}
+
+		img {
+			display: block;
+			clear: both;
+			box-shadow: 7px 7px 5px #888;
+			border: 1px solid #aaa;
+			transition-property: opacity;
+			transition-duration: 0.5s;
+		}
+
+		footer {
+			font-size: 70%;
+			color: #bbb;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<section id="main">
+		<h1>Snapshots</h1>
+		<ul>
+			<li><span data-image="cassie.jpg" title="A dog with curly black fur ">Cassie</span></li>
+			<li><span data-image="seal.jpg" title="A seal on the beach">Seal</span></li>
+			<li><span data-image="wolf.jpg" title="A close up shot of a wolf">Wolf</span></li>
+			<li><span data-image="eagle.jpg" title="An eagle on the snowy ground">Eagle</span></li>
+		</ul>
+		<div id="imagewrapper">
+			<img id="placeholder" src="images/placeholder.gif" alt="my image gallery" />
+		</div>
+		<p id="description">Choose an image.</p>
+		<footer>
+			<p>For IGME-235 Intro to Game Web Tech</p>
+		</footer>
+	</section>
+
+	<script>
+		/*
+		The name of the image is stored in the data-image (custom data) attribute of each
+		span. In JavaScript we access these custom data properties using the .dataset 
+		property. We also covered this in web-apps-6.
+		*/
+		let itemList = document.querySelectorAll("span");
+		const imageArea = document.getElementById("placeholder");
+
+		let displayImage = (e) => {
+			imageArea.src = `images/${e.target.dataset.image}`;
+		}
+
+		for (item of itemList) {
+			item.addEventListener("click", displayImage);
+		}
+	</script>
+</body>
+
+</html>
