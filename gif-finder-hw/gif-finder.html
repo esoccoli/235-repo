@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Giphy Finder</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="js/main.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Giphy Finder</h1>
+    </header>
+
+    <div class="widgets">
+        Search Term ->
+        <input id="searchterm" type="text" size="20" maxlength="20" autofocus value="cats" />
+    </div>
+
+    <div class="widgets">
+        Max # results ->
+        <select id="limit">
+            <option value="5">5</option>
+            <option value="10" selected>10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+        </select>
+    </div>
+
+    <div class="widgets">
+        <button type="button" id="search" class="green">Find some GIFs!<br />:-)</button>
+    </div>
+    <div id="status">Ready to Search!</div>
+    <hr>
+
+    <h2>Results</h2>
+    <div id="content">
+        <p>No data yet!</p>
+    </div>
+
+
+</body>
+
+</html>
