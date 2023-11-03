@@ -66,11 +66,9 @@
             or as a "one-liner" by chaining the method calls.
         */
         console.log("===== Recent cars (year 2010 or newer) =====");
-
-        let newerYearsOnly = cars.map((car) => car.year >= 2010).filter((car) => car.year != undefined);
-        // newerYearsOnly.filter((car) => car != undefined);
-        console.log(newerYearsOnly.length);
-        // debugger;
+        let newerYearsOnly = cars.map(car => { if (car.year >= 2010) return car.year }).filter(year => { return Number.isInteger(year) });
+        console.log(newerYearsOnly);
+        debugger;
     </script>
 </body>
 
