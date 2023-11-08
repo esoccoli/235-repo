@@ -17,32 +17,27 @@ header h1 {
 
 #status {
     font-style: italic;
-    height: 32px;
 }
 
 .result {
-    position: relative;
+    /* position: relative;
     height: 175px;
     width: 100px;
     float: left;
     border: 1px solid gray;
     padding: 5px;
     margin-left: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 10px; */
+    display: flex;
+    flex-direction: column;
 }
 
 .result img {
-    position: absolute;
-    left: 5px;
-    bottom: 5px;
-    display: block;
-
+    box-shadow: 5px 10px 8px #888888;
 }
 
 .result span {
-    font-size: 12px;
-    font-weight: bold;
-    display: block;
+    order: -1;
 }
 
 .result audio {
@@ -88,4 +83,10 @@ button:focus {
 .widgets {
     margin-top: 1em;
     margin-bottom: 1em;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
