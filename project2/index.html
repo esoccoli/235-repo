@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Info</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <header>
+        <h1 id="pagehead">Pokemon Finder</h1>
+    </header>
+
+    <div id="controls-area">
+        <div id="controls-area-top">
+            <p>Search Term -&gt; <input id="searchterm" type="text" size="10" maxlength="50" autofocus /></p>
+        </div>
+        <div id="controls-area-middle">
+            <!-- Replace the text with magnifying glass icon -->
+            <p><button type="button" id="search"><i class="fa fa-search" aria-hidden="true"></i></button></p>
+        </div>
+        <div id="controls-area-bottom">
+            <button id="prev" type="button">Previous</button>
+            <button id="random" type="button">Random</button>
+            <button id="next" type="button">Next</button>
+        </div>
+    </div>
+
+
+    <p id="debug"></p>
+    <hr>
+    <h2>Results</h2>
+    <div id="content">
+        <div id="results">
+            <div id="box-left">
+
+            </div>
+            <div id="box-right">
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
