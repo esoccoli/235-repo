@@ -9,7 +9,7 @@ class Ship extends PIXI.Sprite {
 }
 
 class Circle extends PIXI.Graphics {
-    constructor(radius, color=0xFF0000, x=0, y=0) {
+    constructor(radius, color = 0xFF0000, x = 0, y = 0) {
         super();
         this.beginFill(color);
         this.drawCircle(0, 0, radius);
@@ -22,9 +22,9 @@ class Circle extends PIXI.Graphics {
         this.isAlive = true;
     }
 
-    move(dt=1/60) {
+    move(dt = 1 / 60) {
         this.x += this.fwd.x * this.speed * dt;
-        this.y += this.fwd.y * this.speed * dt; 
+        this.y += this.fwd.y * this.speed * dt;
     }
 
     reflectX() {
@@ -37,20 +37,20 @@ class Circle extends PIXI.Graphics {
 }
 
 class Bullet extends PIXI.Graphics {
-    constructor(color=0xFFFFFF, x=0, y=0) {
+    constructor(color = 0xFFFFFF, x = 0, y = 0) {
         super();
         this.beginFill(color);
         this.drawRect(-2, -3, 4, 6);
         this.endFill();
         this.x = x;
         this.y = y;
-        this.fwd = {x:0, y:-1};
+        this.fwd = { x: 0, y: -1 };
         this.speed = 400;
         this.isAlive = true;
         Object.seal(this);
     }
 
-    move(dt=1/60) {
+    move(dt = 1 / 60) {
         this.x += this.fwd.x * this.speed * dt;
         this.y += this.fwd.y * this.speed * dt;
     }
