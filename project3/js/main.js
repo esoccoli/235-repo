@@ -1,10 +1,14 @@
 "use strict";
 
+// Creates the game canvas with the specified dimensions
 const app = new PIXI.Application({
-    width: 1000,
-    height: 1000
+    width: 800,
+    height: 800
 });
+globalThis.__PIXI_APP__ = app;
 
+
+// Creates an object to store any keyboard keys that will be used for inputs
 const keyboard = Object.freeze({
     LEFT: "LeftArrow",
     RIGHT: "RightArrow",
@@ -12,15 +16,14 @@ const keyboard = Object.freeze({
     D: "d"
 });
 
+// Adds the game canvas to the page
 document.body.appendChild(app.view);
 
+//#region Delcaring game variables
 let stage;
-
 let buttonStyle;
+let dt; // dt = delta time
 
-let dt;
-
-// Game variables
 let menuScene, gameScene, gameOverScene, infoScene;
 
 let scoreLabel, lifeLabel, levelLabel;
@@ -39,12 +42,15 @@ const keys = [];
 // Constants for scene width and height
 const sceneWidth = app.view.width;
 const sceneHeight = app.view.height;
+//#endregion
 
 // app.loader.
 //     add([
 //         "images/spaceship.png",
 //         "images/explosions.png"
 //     ]);
+
+// Logs the loading progress in the console
 app.loader.onProgress.add(e => { console.log(`progress=${e.progress}`) });
 app.loader.onComplete.add(setup);
 app.loader.load();
@@ -77,22 +83,36 @@ function setup()
     // Create labels for all scenes
     createLabelsAndButtons();
 
-    // Create paddle
+    // Create the paddle
     paddle = new Paddle();
     gameScene.addChild(paddle);
 
-    // paddle.addEventListener("")
+    // Create the starting ball (there will be chances to have multiple balls with powerups)
     let startBall = new Ball();
+
+    // Sets the initial position to be centered slightly above the center of the paddle
+    startBall.x = (sceneWidth / 2) - (startBall.radius / 2);
+    startBall.y = (sceneHeight - 130);
+
+    // Ensures that the ball never starts out moving downwards
+    if (startBall.fwd.y > 0)
+    {
+        startBall.fwd.y *= -1;
+    }
+
     balls.push(startBall);
     gameScene.addChild(startBall);
 
-    // TODO: Create bricks
+    // Creates all the bricks and stores then in an array
+    resetBricks();
 
     // TODO: Create powers
 
     // Starts the game loop
     app.ticker.add(gameLoop);
 
+    // Adds event listeners to detect when keyboard input is given, and
+    // move the paddle in the appropriate direction when proper key is pressed
     window.addEventListener("keydown", (e) =>
     {
         if (e.key == "a" || e.key == "ArrowLeft")
@@ -105,7 +125,6 @@ function setup()
             paddle.moveRight(dt);
         }
 
-        // console.log(`Paddle pos: (${paddle.x}, ${paddle.y})`);
     });
 }
 
@@ -280,11 +299,115 @@ function gameLoop()
 {
     // if (paused) return;
 
+    // Keeps track of delta time
     dt = 1 / app.ticker.FPS;
     if (dt > 1 / 12)
     {
         dt = 1 / 12;
     }
 
+    // Moves all of the balls in the scene each frame
+    // Bounces balls off of objects as necessary
+    for (let b of balls)
+    {
+        b.move(dt);
+
+        if (b.x <= b.radius || b.x >= sceneWidth - b.radius)
+        {
+            b.reflectX();
+            b.move(dt);
+        }
+
+        if (b.y <= b.radius)
+        {
+            b.reflectY();
+            b.move(dt);
+        }
+    }
+
+    // Makes the ball bounce off the paddle
+
+    for (let ball of balls)
+    {
+        checkBallPaddleCollisions(ball);
+        checkBallBrickCollisions(ball);
+    }
+
     return;
+}
+
+// Creates an appropriate number of bricks (with appropriate positions and sizes)
+// and adds them to an array
+function resetBricks()
+{
+    const numRows = 8;
+    const numCols = 6;
+
+    // Number of pixels between bricks
+    const brickSpacing = 10;
+    // const horizontalSpacing = -75;
+    // Farthest down that a brick can be drawn
+    let brickAreaHeight = sceneHeight / 3;
+
+    // Y-coordinate of the first row of bricks
+    const brickAreaTopOffset = 30;
+    const brickAreaSideOffset = 10;
+
+    // Calculates the dimensions of the bricks based on the window size and the above values
+    let brickWidth = (sceneWidth - (numCols * brickSpacing) - (2 * brickSpacing)) / numCols;
+    let brickHeight = ((brickAreaHeight - (numRows * brickSpacing)) / numRows);
+
+    // Adds all the bricks to the list
+    for (let row = 0; row < numRows; row++)
+    {
+        for (let col = 0; col < numCols; col++)
+        {
+            let newBrick = new Brick(
+                5 + col * (brickWidth + brickSpacing),
+                brickAreaTopOffset + row * (brickHeight + brickSpacing),
+                brickWidth,
+                brickHeight,
+                0xFF0000
+            );
+            bricks.push(newBrick);
+        }
+    }
+
+    for (let brick of bricks)
+    {
+        gameScene.addChild(brick);
+    }
+}
+
+// Checks whether the ball is colliding with the paddle
+// if it is, reverses the ball's y velocity
+function checkBallPaddleCollisions(ball)
+{
+    if (ball.x - ball.radius >= paddle.x &&
+        ball.x + ball.radius <= paddle.x + paddle.width &&
+        ball.y + ball.radius >= paddle.y &&
+        ball.y - ball.radius <= paddle.y + paddle.height)
+    {
+        ball.reflectY();
+    }
+}
+
+function checkBallBrickCollisions(ball)
+{
+    for (let brick of bricks)
+    {
+        if (ball.x - ball.radius >= brick.x &&
+            ball.x + ball.radius <= brick.x + brick.width &&
+            ball.y + ball.radius >= brick.y &&
+            ball.y - ball.radius <= brick.y + brick.height)
+        {
+            ball.reflectY();
+            brick.isBroken = true;
+            gameScene.removeChild(brick);
+        }
+
+        bricks.filter(brick => brick.broken == false)
+    }
+
+
 }
