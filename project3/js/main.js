@@ -39,6 +39,9 @@ let lives = 5;
 let level = 1;
 const keys = [];
 
+let left = false;
+let right = false;
+
 // Constants for scene width and height
 const sceneWidth = app.view.width;
 const sceneHeight = app.view.height;
@@ -117,12 +120,26 @@ function setup()
     {
         if (e.key == "a" || e.key == "ArrowLeft")
         {
-            paddle.moveLeft(dt);
+            left = true;
         }
 
         if (e.key == "d" || e.key == "ArrowRight")
         {
-            paddle.moveRight(dt);
+            right = true;
+        }
+
+    });
+
+    window.addEventListener("keyup", (e) =>
+    {
+        if (e.key == "a" || e.key == "ArrowLeft")
+        {
+            left = false;
+        }
+
+        if (e.key == "d" || e.key == "ArrowRight")
+        {
+            right = false;
         }
 
     });
@@ -306,6 +323,15 @@ function gameLoop()
         dt = 1 / 12;
     }
 
+    if (left == true)
+    {
+        paddle.moveLeft(dt);
+    }
+
+    if (right == true)
+    {
+        paddle.moveRight(dt);
+    }
     // Moves all of the balls in the scene each frame
     // Bounces balls off of objects as necessary
     for (let b of balls)
@@ -383,7 +409,8 @@ function resetBricks()
 // if it is, reverses the ball's y velocity
 function checkBallPaddleCollisions(ball)
 {
-    if (ball.x - ball.radius >= paddle.x &&
+    if (ball.fwd.y > 0 &&
+        ball.x - ball.radius >= paddle.x &&
         ball.x + ball.radius <= paddle.x + paddle.width &&
         ball.y + ball.radius >= paddle.y &&
         ball.y - ball.radius <= paddle.y + paddle.height)
@@ -402,12 +429,11 @@ function checkBallBrickCollisions(ball)
             ball.y - ball.radius <= brick.y + brick.height)
         {
             ball.reflectY();
-            brick.isBroken = true;
+            brick.broken = true;
             gameScene.removeChild(brick);
+            // console.log(bricks);
         }
 
-        bricks.filter(brick => brick.broken == false)
+        bricks = bricks.filter(brick => !brick.broken);
     }
-
-
 }

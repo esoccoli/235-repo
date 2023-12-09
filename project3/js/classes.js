@@ -4,11 +4,11 @@ class Ball extends PIXI.Graphics
     constructor(x = 0, y = 0, radius = 10, color = 0xFFFFFF)
     {
         super();
+        this.x = 0;
+        this.y = 0;
         this.beginFill(color);
         this.drawCircle(x, y, radius);
         this.endFill();
-        this.x = x;
-        this.y = y;
         this.radius = radius;
         this.speed = 300;
         this.fwd = getRandomUnitVector();
@@ -43,7 +43,7 @@ class Paddle extends PIXI.Graphics
         this.height = height;
         this.x = (sceneWidth / 2) - width / 2;
         this.y = (sceneHeight - 100);
-        this.speed = 900;
+        this.speed = 500;
 
         this.beginFill(color);
         this.drawRect(x, y, width, height);
