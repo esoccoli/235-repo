@@ -46,6 +46,7 @@ function setup()
 
     gameScene.addChild(ball);
 
+    //#region Sound effects
     powerupSound = new Howl({
         src: ['sounds/collected-power.wav']
     });
@@ -65,6 +66,7 @@ function setup()
     gameOverSound = new Howl({
         src: ['sounds/gameover.mp3']
     });
+    //#endregion
 
     // Creates all the bricks and stores then in an array
     resetBricks();

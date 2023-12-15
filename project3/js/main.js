@@ -101,6 +101,7 @@ function startGame()
     goToGame();
 }
 
+// The main loop that executes every frame that the game is running
 function gameLoop()
 {
     // Keeps track of delta time

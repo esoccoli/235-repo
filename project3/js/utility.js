@@ -39,7 +39,7 @@ function goToGameOver()
 
 //#endregion
 
-// these 2 helpers are used by classes.js
+// Gets a random unit vector
 function getRandomUnitVector()
 {
     let x = getRandom(-1, 1);
@@ -70,6 +70,7 @@ function getRandomUnitVector()
     return { x: x, y: y };
 }
 
+// Gets a random number within the provided range
 function getRandom(min, max)
 {
     return Math.random() * (max - min) + min;
@@ -218,10 +219,3 @@ function setScoreMultTo(value)
     increaseScoreMultBy(0);
 }
 //#endregion
-
-// function rectsIntersect(a, b)
-// {
-//     var ab = a.getBounds();
-//     var bb = b.getBounds();
-//     return ab.x + ab.width > bb.x && ab.x < bb.x + bb.width && ab.y + ab.height > bb.y && ab.y < bb.y + bb.height;
-// }

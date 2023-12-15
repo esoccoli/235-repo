@@ -33,7 +33,8 @@ class Ball extends PIXI.Graphics
         this.fwd.y *= -1;
     }
 }
-// 2 - Paddle class
+
+// Manages the paddle
 class Paddle extends PIXI.Graphics
 {
     constructor(x = 0, y = 0, width = 150, height = 20, color = colors.white)
@@ -81,7 +82,7 @@ class Paddle extends PIXI.Graphics
     }
 }
 
-// 3 - Brick class
+// Manages the bricks
 class Brick extends PIXI.Graphics
 {
     constructor(x, y, width, height, color = colors.white)
@@ -98,6 +99,7 @@ class Brick extends PIXI.Graphics
     }
 }
 
+// Manages the general powerup
 class Powerup extends PIXI.Graphics
 {
     constructor(color, x = 0, y = 0, radius = 20)
@@ -128,6 +130,7 @@ class Powerup extends PIXI.Graphics
     }
 }
 
+// Manages the score multiplier power up
 class ScoreMultiplier extends Powerup
 {
     constructor(color)
@@ -137,6 +140,7 @@ class ScoreMultiplier extends Powerup
     }
 }
 
+// Manages the extra life power up
 class ExtraLife extends Powerup
 {
     constructor(color)

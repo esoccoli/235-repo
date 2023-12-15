@@ -5,125 +5,77 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Documentation</title>
-
-    <style>
-        body {
-            font-size: 20px;
-        }
-    </style>
 </head>
 
 <body>
-    <h2>To-Do List</h2>
-    <div class="checklist">
-        <div><input type="checkbox" name="todo-item" id="make-menu-screen"> Create menu screen</div>
-        <div><input type="checkbox" name="todo-item" id="make-info-screen"> Create info screen to display
-            instructions
-            and controls</div>
-        <div><input type="checkbox" name="todo-item" id="make-game-over-screen"> Create game over screen
-        </div>
-        <div><input type="checkbox" name="todo-item" id="make-screen-transitions"> Create ways to navigate between
-            different screens</div>
-        <div><input type="checkbox" name="todo-item" id="make-ball"> Create ball</div>
-        <div><input type="checkbox" name="todo-item" id="make-bricks"> Create bricks</div>
-        <div><input type="checkbox" name="todo-item" id="make-paddle"> Create paddle</div>
-        <div><input type="checkbox" name="todo-item" id="make-paddle-movement-keybinds"> Add keybinds to let player
-            move paddle left and right</div>
-        <div><input type="checkbox" name="todo-item" id="ball-wall-collisions"> Add collisions between ball and
-            walls (excluding floor)</div>
-        <div><input type="checkbox" name="todo-item" id="ball-paddle-collisions"> Add collisions between ball and
-            paddle</div>
-        <div><input type="checkbox" name="todo-item" id="ball-brick-collisions"> Add collisions between ball and
-            bricks (which breaks bricks)</div>
-        <div><input type="checkbox" name="todo-item" id="implement-lives"> Add lives</div>
-        <div><input type="checkbox" name="todo-item" id="implement-score"> Add score</div>
-        <div><input type="checkbox" name="todo-item" id="make-level-counter"> Create a counter to track the current
-            level</div>
-        <div><input type="checkbox" name="todo-item" id="create-powers"> Make powerups appear on screen
-        </div>
+    <h2>Process</h2>
 
-        <div><input type="checkbox" name="todo-item" id="ball-power-collisions"> Make ball colliding with powerup
-            send
-            power to inventory (and remove power from screen)</div>
-        <div><input type="checkbox" name="todo-item" id="ability-to-lose-lives"> Add losing life when ball falls
-            below
-            Screen bottom</div>
-        <div><input type="checkbox" name="todo-item" id="ability-to-earn-points"> Add earning points when breaking
-            bricks</div>
-        <div><input type="checkbox" name="todo-item" id="score-multiplier-power"> Add powerup that gives score
-            multiplier</div>
-        <div><input type="checkbox" name="todo-item" id="extra-ball-power"> Add powerup that creates additional
-            ball</div>
-        <div><input type="checkbox" name="todo-item" id="fireball-power"> Add powerup that lets ball not reverse
-            direction after breaking bricks</div>
-        <div><input type="checkbox" name="todo-item" id="player-inv"> Add player inventory</div>
-        <div><input type="checkbox" name="todo-item" id="display-player-inv"> Add display of player
-            inventory
-        </div>
-        <div><input type="checkbox" name="todo-item" id="collected-power-to-inv"> Make collected powerups move to
-            inventory</div>
-        <div><input type="checkbox" name="todo-item" id="use-inv-power-keybind"> Create keybind to use powerup from
-            inventory</div>
-        <div><input type="checkbox" name="todo-item" id="brick-broken-sound"> Add sound effect that plays whenever a
-            brick is broken</div>
-        <div><input type="checkbox" name="todo-item" id="ball-bounce-sound"> Add sound effect that plays whenever
-            the
-            ball bounces off a wall/the paddle</div>
-        <div><input type="checkbox" name="todo-item" id="life-lost-sound"> Add sound effect that plays whenever a
-            life
-            is lost</div>
-        <div><input type="checkbox" name="todo-item" id="move-to-next-level"> Move game to next level once all
-            bricks
-            are broken (maybe have text that needs to be clicked to continue)</div>
-    </div>
+    <p>
+        My process for working on this project was breaking the project into many smaller parts, and working on one part at a time,
+        and then moving to the next part once the current one is complete. For example, I started by doing the scene setup, which
+        included creating all the scenes, and adding all necessary text and buttons to the scenes. After that, I started working on
+        the game itself. For that, I started by making the paddle and getting it to move left and right smoothly with user input. Then,
+        I started working on the ball, making it move around the screen and bounce off walls and the paddle. Once that was working sufficiently,
+        I made the bricks, and added collisions between the ball and the bricks. After that, I implemented power ups. Once all of that was implemented,
+        I went back and started fixing bugs that had came up while developing.
+    </p>
 
     <h2>Requirements</h2>
-    <div class="checklist">
-        <div><input type="checkbox" name="todo-item" id="use-pixi-or-js-dom"> Must use either PixiJS or JavaScript
-            and the Browser DOM</div>
-        <div><input type="checkbox" name="todo-item" id="no-js-errors"> No JavaScript errors are thrown at any
-            point</div>
-        <div><input type="checkbox" name="todo-item" id="pleasing-graphic-design"> Pleasing graphic design
-        </div>
-        <div><input type="checkbox" name="todo-item" id="well-labeled-widgets"> Widgets are well labeled
-        </div>
-        <div><input type="checkbox" name="todo-item" id="provide-necessary-instruction"> Provide any needed
-            instructions</div>
-        <div><input type="checkbox" name="todo-item" id="handle-user-errors"> Handle user erros gracefully
-        </div>
-        <div><input type="checkbox" name="todo-item" id="responsive-layout"> Layout looks good on various screen
-            sizes (1024x768 among others)</div>
-        <div><input type="checkbox" name="todo-item" id="properly-optimized-images"> Images are properly optimized
-            for web</div>
-        <div><input type="checkbox" name="todo-item" id="includes-sound"> Includes sound in some way</div>
-        <div><input type="checkbox" name="todo-item" id="valid-html"> Reasonably valid HTML</div>
-        <div><input type="checkbox" name="todo-item" id="valid-css"> Reasonably valid CSS</div>
-        <div><input type="checkbox" name="todo-item" id="external-css"> Most CSS is in an external
-            stylesheet</div>
-        <div><input type="checkbox" name="todo-item" id="use-semantic-html"> Use HTML5 semantic and structural
-            elements where practical</div>
-        <div><input type="checkbox" name="todo-item" id="es6-classes"> Use at least 1 ES6 class</div>
-        <div><input type="checkbox" name="todo-item" id="no-var"> Use only 'let' and 'const' for variables (no
-            'var')</div>
-        <div><input type="checkbox" name="todo-item" id="use-query-selector"> Use 'querySelector' and
-            'querySelectorAll' for DOM traversal</div>
-        <div><input type="checkbox" name="todo-item" id="dont-repeat-yourself"> D.R.Y - factor out nearly identical
-            code and put it in a separate function</div>
-        <div><input type="checkbox" name="todo-item" id="separation-of-concerns"> Separation of concerns - use
-            different JS files for different purposes (ex: main file, classes file, utility file, etc)</div>
-        <div><input type="checkbox" name="todo-item" id="lowercase-var-and-function-names"> begin variable and
-            function names with a lowercase letter</div>
-        <div><input type="checkbox" name="todo-item" id="well-commented-code" /> Include sufficient comments in the
-            code to explain what is happening (ex: every function gets a comment)</div>
-        <div><input type="checkbox" name="todo-item" id="no-console-logs"> Delete or comment all 'console.log()'
-            calls</div>
-    </div>
+
+    <h3>ES6 Classes</h3>
+
+    <ul>
+        <li>Brick class</li>
+        <li>Paddle class</li>
+        <li>Ball class</li>
+        <li>Extra Life powerup class</li>
+        <li>Score Multiplier powerup class</li>
+    </ul>
+
+    <h3>Sound Effects</h3>
+
+    <p>My game has sound effects that play when the following events occur:</p>
+
+    <ul>
+        <li>Brick gets broken</li>
+        <li>Power up collected</li>
+        <li>Life lost</li>
+        <li>Level cleared</li>
+        <li>Game over</li>
+    </ul>
+
+    <h3>Other Requirements</h3>
+
+    <p>Listed below are many of the other requirements that I met</p>
+
+    <ul>
+        <li>All CSS and JS is in separate files</li>
+        <li>Multiple JS files are used to separate concerns</li>
+        <li>All variables are declared using let or const</li>
+        <li>Repeated code is separated out into functions</li>
+        <li>All HTML and CSS passed validation</li>
+        <li>Code is well commented</li>
+    </ul>
+
+    <h2>Sources</h2>
+
+    <h3>Fonts</h3>
+
+    <ul>
+        <li><a href="https://www.1001fonts.com/pixelony-font.html">Pixelony</a></li>
+        <li><a href="https://www.1001fonts.com/roboto-font.html">Roboto</a></li>
+    </ul>
+
+    <h3>Sounds</h3>
+
+    <p>Sounds were obtained from various online sources that provide free sound effects, such as</p>
+
+    <ul>
+        <li><a href="https://pixabay.com/sound-effects/search/game/">Pixabay</a></li>
+        <li><a href="https://www.zapsplat.com/sound-effect-category/game-sounds/">Zapsplat</a></li>
+        <li><a href="https://www.storyblocks.com/audio/search?media-type=sound-effects&categories=toys-and-games">Storyblocks</a></li>
+    </ul>
+
 </body>
 
 </html>
-
-<!-- <h1>Documentation</h1> -->
-
-<!-- Fonts -->
-<!-- https://www.1001fonts.com/pixelony-font.html -->
-<!-- https://www.1001fonts.com/roboto-font.html -->
