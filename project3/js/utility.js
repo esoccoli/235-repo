@@ -39,76 +39,21 @@ function goToGameOver()
 
 //#endregion
 
-//#region Counter management
-
-// Increases score by specified value
-function increaseScoreBy(value)
-{
-    score += value * scoreMult;
-    scoreLabel.text = `Score: ${score}`;
-}
-
-function setScoreTo(value)
-{
-    score = value;
-    increaseScoreBy(0);
-}
-
-// Decreases life count by specified value
-function decreaseLifeBy(value)
-{
-    lives -= value;
-    lifeLabel.text = `Lives: ${lives}`;
-}
-
-function setLivesTo(value)
-{
-    lives = value;
-    decreaseLifeBy(0);
-}
-// Increases level counter and updates the display text
-function advanceLevel()
-{
-    level += 1;
-    levelLabel.text = `Level: ${level}`;
-}
-
-function setLevelTo(value)
-{
-    level = value;
-    levelLabel.text = `Level: ${level}`;
-}
-
-// Increases the score multiplier by the specified amount
-// Pass a negative value to decrease the multiplier
-function increaseScoreMultBy(value)
-{
-    scoreMult += value;
-    scoreMultLabel.text = `Score Multiplier: ${scoreMult}`;
-}
-
-function setScoreMultTo(value)
-{
-    scoreMult = value;
-    increaseScoreMultBy(0);
-}
-//#endregion
-
 // these 2 helpers are used by classes.js
 function getRandomUnitVector()
 {
     let x = getRandom(-1, 1);
     let y = getRandom(-1, 1);
 
-    // if (x <= 0.25 && x >= -0.25)
-    // {
-    //     x = 0.25;
-    // }
+    if (x <= 0.25 && x >= -0.25)
+    {
+        x = 0.25;
+    }
 
-    // if (y <= 0.25 && y >= -0.25)
-    // {
-    //     y = 0.25;
-    // }
+    if (y <= 0.25 && y >= -0.25)
+    {
+        y = 0.25;
+    }
 
     let length = Math.sqrt(x * x + y * y);
     if (length == 0)
@@ -168,14 +113,14 @@ function checkBallBrickCollisions()
     {
         if (ballRectCollision(brick))
         {
-            ball.reflectY();
-            brick.broken = true;
             gameScene.removeChild(brick);
+            brick.broken = true;
             increaseScoreBy(10 * scoreMult);
+            ball.reflectY();
         }
-
-        bricks = bricks.filter(brick => !brick.broken);
     }
+
+    bricks = bricks.filter(brick => !brick.broken);
 }
 
 // Checks whether the ball is colliding with the paddle
@@ -185,7 +130,23 @@ function checkBallPaddleCollisions()
     if (ball.fwd.y > 0 &&
         ballRectCollision(paddle))
     {
-        ball.reflectY();
+        let paddleCenterX = paddle.x + (paddle.width / 2);
+
+        let ballRelativeX = ball.x - paddleCenterX;
+
+        if (ballRelativeX < (-paddle.width / 2))
+        {
+            ballRelativeX = -paddle.width / 2;
+        }
+        if (ballRelativeX > (paddle.width / 2))
+        {
+            ballRelativeX = paddle.width / 2;
+        }
+
+        let reflectionAngle = ballRelativeX / (paddle.width / 2);
+
+        ball.fwd.x *= Math.min(Math.acos(reflectionAngle), 0.90);
+        ball.fwd.y *= -1;
     }
 }
 
@@ -202,3 +163,65 @@ function randomPower()
 {
     return Math.round(Math.random() * numPowerTypes);
 }
+
+//#region Counter management
+
+// Increases score by specified value
+function increaseScoreBy(value)
+{
+    score += value * scoreMult;
+    scoreLabel.text = `Score: ${score}`;
+}
+
+function setScoreTo(value)
+{
+    score = value;
+    increaseScoreBy(0);
+}
+
+// Decreases life count by specified value
+function decreaseLifeBy(value)
+{
+    lives -= value;
+    lifeLabel.text = `Lives: ${lives}`;
+}
+
+function setLivesTo(value)
+{
+    lives = value;
+    decreaseLifeBy(0);
+}
+// Increases level counter and updates the display text
+function advanceLevel()
+{
+    level += 1;
+    levelLabel.text = `Level: ${level}`;
+}
+
+function setLevelTo(value)
+{
+    level = value;
+    levelLabel.text = `Level: ${level}`;
+}
+
+// Increases the score multiplier by the specified amount
+// Pass a negative value to decrease the multiplier
+function increaseScoreMultBy(value)
+{
+    scoreMult += value;
+    scoreMultLabel.text = `Score Multiplier: ${scoreMult}`;
+}
+
+function setScoreMultTo(value)
+{
+    scoreMult = value;
+    increaseScoreMultBy(0);
+}
+//#endregion
+
+// function rectsIntersect(a, b)
+// {
+//     var ab = a.getBounds();
+//     var bb = b.getBounds();
+//     return ab.x + ab.width > bb.x && ab.x < bb.x + bb.width && ab.y + ab.height > bb.y && ab.y < bb.y + bb.height;
+// }

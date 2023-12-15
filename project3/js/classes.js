@@ -1,7 +1,7 @@
 // Manages the ball
 class Ball extends PIXI.Graphics
 {
-    constructor(x = 0, y = 0, radius = 10, color = 0xFFFFFF)
+    constructor(x = 0, y = 0, radius = 10, color = colors.white)
     {
         super();
         this.x = 0;
@@ -36,7 +36,7 @@ class Ball extends PIXI.Graphics
 // 2 - Paddle class
 class Paddle extends PIXI.Graphics
 {
-    constructor(x = 0, y = 0, width = 100, height = 20, color = 0xFFFFFF)
+    constructor(x = 0, y = 0, width = 150, height = 20, color = colors.white)
     {
         super();
         this.width = width;
@@ -84,7 +84,7 @@ class Paddle extends PIXI.Graphics
 // 3 - Brick class
 class Brick extends PIXI.Graphics
 {
-    constructor(x, y, width, height, color = 0xFFFFFF)
+    constructor(x, y, width, height, color = colors.white)
     {
         super();
         this.x = x;
@@ -97,7 +97,6 @@ class Brick extends PIXI.Graphics
         this.broken = false
     }
 }
-// 4 - Powerup class(es)
 
 class Powerup extends PIXI.Graphics
 {
