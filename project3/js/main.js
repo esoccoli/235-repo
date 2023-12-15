@@ -67,8 +67,8 @@ const sceneHeight = app.view.height;
 //#endregion
 
 //#region Variables used for calculating brick sizes and positions
-const numRows = 2;
-const numCols = 2;
+const numRows = 6;
+const numCols = 6;
 const brickSpacing = 10;
 let brickAreaHeight = sceneHeight / 3;
 const brickAreaTopOffset = 70;
@@ -91,7 +91,7 @@ function startGame()
     }
 
     setLevelTo(1);
-    setLivesTo(1);
+    setLivesTo(5);
     setScoreMultTo(1);
     setScoreTo(0);
     resetBall();
